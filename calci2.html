@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="C:\Users\Admin\Desktop\J SPIDERS\Bootstrap\css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="C:\Users\Admin\Desktop\J SPIDERS\Bootstrap\css/mdb.css">
+	<link rel="stylesheet" type="text/css" href="C:\Users\Admin\Desktop\J SPIDERS\Bootstrap\css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="calci.css">
+	<title>Calculator</title>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="card animated fadeInLeft" style="width: 750px" id="card">
+
+			<div class="card-header text-center bg text-white">
+
+				<h3 class="">CALCULATOR</h3>
+				
+			</div>
+
+			<div class="card-body bgl">
+				
+			  <div class="container">
+
+			  	<div class="form-inline form-group">
+
+			  	  <input type="number" id="text1" class="form-control w-25 font-weight-bold " placeholder="Enter Num one">
+
+			  	  <button class="btn btn-primary font-weight-bold " id="op" value="+">+</button>
+
+			  	  <input type="number" id="text2" class="form-control w-25 font-weight-bold" placeholder="Enter Num Two">
+
+			  	  <input type="button" value="=" class="btn btn-success font-weight-bold " id="equals">
+
+			  	  <span class="btn btn-primary font-weight-bold" id="result">Result</span>
+
+			  	</div>
+
+			  	<hr>
+
+			  	<div>
+
+			  		<label class="font-weight-bold">Choose Operator:</label>
+
+			  		<button class="btn btn-warning font-weight-bold" id="plus">+</button>
+
+			  		<button class="btn btn-danger font-weight-bold" id="minus">-</button>
+
+			  		<button class="btn btn-secondary font-weight-bold" id="mul">*</button>
+
+			  		<button class="btn btn-white font-weight-bold" id="divs">/</button>
+
+			  		<button class="btn btn-outline-dark font-weight-bold" id="clear">CLEAR</button>
+
+
+			  	</div>
+					
+				</div>
+
+			  </div>
+
+			<div class="card-footer text-center bgs text-white">
+				<h4>Developed By @RockNagendra</h4>
+			</div>
+
+		</div>
+		
+	</div>
+
+<script>
+
+	let textBox1=document.querySelector('#text1');
+
+	let textBox2=document.querySelector('#text2');
+
+	let display=document.querySelector('#result');
+
+	let equals=document.querySelector('#equals');
+
+	let op=document.querySelector('#op');
+
+	let plus=document.querySelector('#plus');
+
+	let minus=document.querySelector('#minus');
+
+	let mul=document.querySelector('#mul');
+
+	let dive=document.querySelector('#dive');
+
+	let clear=document.querySelector('#clear');
+
+	equals.addEventListener('click',function()
+	{
+		let x=parseInt(textBox1.value);
+
+		let y=parseInt(textBox2.value);
+
+		let ope=op.value;
+
+		   if(ope==='+')
+		{
+
+		    let result=x+y;
+
+		    display.innerText=result;
+
+	    }else if(ope==='-'){
+
+
+	    	let result=x-y;
+
+		    display.innerText=result;
+
+	    }else if(ope==='*'){
+
+
+	    	let result=x*y;
+
+		    display.innerText=result;
+
+	    }else if(ope==='/'){
+
+
+	    	let result=x/y;
+
+		    display.innerText=result;
+	    }
+	});
+
+	plus.addEventListener('click',function()
+	{
+		op.value='+';
+
+		op.innerText=op.value;
+
+		let x=parseInt(textBox1.value);
+
+		let y=parseInt(textBox2.value);
+
+		let result=x+y;
+
+		display.innerText=result;
+	});
+
+	minus.addEventListener('click',function()
+	{
+		op.value='-';
+
+		op.innerText=op.value;
+
+		let x=parseInt(textBox1.value);
+
+		let y=parseInt(textBox2.value);
+
+		let result=x-y;
+
+		display.innerText=result;
+	});
+
+	mul.addEventListener('click',function()
+	{
+		op.value='*';
+
+		op.innerText=op.value;
+
+		let x=parseInt(textBox1.value);
+
+		let y=parseInt(textBox2.value);
+
+		let result=x*y;
+
+		display.innerText=result;
+	});
+
+	divs.addEventListener('click',function()
+	{
+		op.value='/';
+
+		op.innerText=op.value;
+
+		let x=parseInt(textBox1.value);
+
+		let y=parseInt(textBox2.value);
+
+		let result=x/y;
+
+		display.innerText=result;
+	});
+
+	clear.addEventListener('click',function()
+	{
+
+		textBox1.value="";
+
+		textBox2.value="";
+
+		display.innerText='Result';
+	});
+</script>
+</html>

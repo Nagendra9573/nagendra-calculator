@@ -1,0 +1,29 @@
+
+input[type='number']
+{
+	width: 120px
+}
+.card
+{
+	margin: 80px auto;
+}
+.bg
+{
+	background:linear-gradient(75deg,#2C3E50,#03A9F4);
+}
+.bgs
+{
+	background:linear-gradient(75deg,#0E6655,#4A235A );
+}
+.bgl
+{
+	background:linear-gradient(75deg,#82E0AA ,#A3E4D7,#82E0AA );
+}
+.plus
+{
+	font-size: 50px;
+}
+button
+{
+	border-radius: 20px;
+}
